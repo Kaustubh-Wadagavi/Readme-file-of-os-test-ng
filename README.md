@@ -7,7 +7,7 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 |**File Name**       |           **Description**
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------
 | config.json        |           It contains the server URL, Users, and DB JSON objects. (Check the "config.json Properties Table" for more information about 
-|--------------------|           properties and their description)
+|                    |           properties and their description)
 | data.csv           |           This file contains the test cases.
 | os_fresh.zip       |           The zip file contains the $os-fresh.sql file. In this file, the extra table's schema and test data available.
 | suite.xml          |           This file contains the paths of required files to run the suite. 
