@@ -5,7 +5,7 @@
 This repository is used to test the OpenSpecimen app. It runs daily on the build server. For every module of OpenSpecimen, different directories are present in the resources of the test suite. Also, this contains different scripts. Each suite directory contains four files as follows:
 
 |**File Name**       |           **Description**
-|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------
 | config.json        |           It contains the server URL, Users, and DB JSON objects. (Check the "config.json Properties Table" for more information about 
 |                    |           properties and their description)
 | data.csv           |           This file contains the test cases.
@@ -30,7 +30,7 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 ### config.json Properties Table
 
 |**Property Name**       |  **Description**
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------| 1. server url          |   OpenSpecimen's instance URL. (Which the framework would be testing)
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------| 1. server url          |   OpenSpecimen's instance URL. (Which the framework would be testing)
 | 2. users               |   OpenSpecimen user's login id and passwords. (This is used to authenticate when calling APIs)
 | 3. db1                 |   Build server's MySQL configurations.(Note: Don't change these configurations)
 | 4. db                  |   Local MySQL configurations. (Create same name database, password, and database user in local)
