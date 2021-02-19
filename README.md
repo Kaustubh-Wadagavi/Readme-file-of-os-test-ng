@@ -6,11 +6,10 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 
 |**File Name**       |           **Description**
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------
-| config.json        |           It contains the server URL, Users, and DB JSON objects. (Check the "config.json Properties Table" for more information about 
-|                    |           properties and their description)
-| data.csv           |           This file contains the test cases.
-| os_fresh.zip       |           The zip file contains the $os-fresh.sql file. In this file, the extra table's schema and test data available.
-| suite.xml          |           This file contains the paths of required files to run the suite. 
+| 1. config.json     |           It contains the server URL, Users, and DB JSON objects. (Check the "config.json Properties Table" for more information)
+| 2. data.csv        |           This file contains the test cases.
+| 3. os_fresh.zip    |           The zip file contains the $os-fresh.sql file. In this file, the extra table's schema and test data available.
+| 4. suite.xml       |           This file contains the paths of required files to run the suite. (Check the "suite.xml Properties Table" for more information)
 
 ### How to setup source-code?
 
@@ -35,3 +34,12 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 | 2. users               |   OpenSpecimen user's login id and passwords. (This is used to authenticate when calling APIs)
 | 3. db1                 |   Build server's MySQL configurations.(Note: Don't change these configurations)
 | 4. db                  |   Local MySQL configurations. (Create same name database, password, and database user in local)
+
+### suite.xml Properties Table
+
+|**Property Name**   |  **Description**
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------
+| 1. schemaDump      |   Path to schema dump(schema.sql) file.(Check the how to create the schema and os-tables.csv file for more info)
+| 2. dataDump        |   Path to os-fresh.zip(extra-tables schema and data dump) file of specific suite. (Check how to create the os_fresh.zip)
+| 3. configFile      |   Path to config.json file. (For more information check the confi.json properties table)
+| 4. testFile        |   Path to test data file. (data.csv)
