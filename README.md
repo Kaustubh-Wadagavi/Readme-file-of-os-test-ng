@@ -25,7 +25,4 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 3. gradle clean
 4. gradle test
 
-**Note:**
-
-The TestNG output report is generated in $src_dir/testngOutput/custom-emailable-report.html (This report shows only the highlight of the test run. It should be embedded in the email being sent)
-The Gradle output report is generated in $src_dir/build/reports/tests/index.html (This is the detailed report)
+**Note:**   The Gradle output report is generated in $os-api-tests/test-output/index.html (This is the detailed report)
