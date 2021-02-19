@@ -25,4 +25,12 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 3. gradle clean
 4. gradle test
 
-**Note:**   The Gradle output report is generated in $os-api-tests/test-output/index.html (This is the detailed report)
+**Note:**   The Gradle output report is generated in $os-api-tests/test-output/index.html 
+
+### config.json Properties Table
+
+|**Property Name**       |  **Description**
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------| 1. server url          |   OpenSpecimen's instance URL. (Which the framework would be testing)
+| 2. users               |   OpenSpecimen user's login id and passwords. (This is used to authenticate when calling APIs)
+| 3. db1                 |   Build server's MySQL configurations.(Note: Don't change these configurations)
+| 4. db                  |   Local MySQL configurations. (Create same name database, password, and database user in local)
