@@ -39,7 +39,32 @@ This repository is used to test the OpenSpecimen app. It runs daily on the build
 
 |**Property Name**   |  **Description**
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------
-| 1. schemaDump      |   Path to schema dump(schema.sql) file.(Check the how to create the schema and os-tables.csv file for more info)
+| 1. schemaDump      |   Path to schema dump(schema.sql) file.(Check the how to create the schema.sql and os-tables.csv files for more info)
 | 2. dataDump        |   Path to os-fresh.zip(extra-tables schema and data dump) file of specific suite. (Check how to create the os_fresh.zip)
 | 3. configFile      |   Path to config.json file. (For more information check the confi.json properties table)
 | 4. testFile        |   Path to test data file. (data.csv)
+
+### How to create the schema.sql and os-tables.csv 
+
+1. Before running the below script make sure the OpenSpecimen clean server is up.
+2. Open the Create-clean-and-tables-csv.sh file. Configure the database properties and file paths.
+3. Run using the below command:
+        ./Create-clean-schema-and-tables-csv.sh
+        
+**Note**
+
+A. The above script creates the schema.sql file and os-tables.csv file from latest build.
+B. Make sure after running the script schema.sql file moved to $os-api-tests/src/test/resources directory. (This is the schemaDump file. It is common schema file which is used for all suites commonly)
+
+### How to create the os_fresh.zip file
+
+1. After creating the test data using user interface in the OpenSpecimen.
+2. Open the Create-extra-tables-schema-and-data-dump.sh file and configure the database properties and file paths and names.
+3. Run using the following command: ./Create-extra-tables-schema-and-data-dump.sh
+
+**Note**
+
+1. The above script creates the TC-Specific-Dump zip file(It contain the whole dump of specific suites) and os_fresh.zip file.
+2. After creating both zips. Move the Tc-Specific-Dump zip file to $os-api-tests/Tc-Specific-Dumps folder and move os_fresh.zip file to specific suites)
+3. The os_fresh.zip file contains the os_fresh.sql. This file contains the OpenSpecimen extra tables schema and test data.
+
